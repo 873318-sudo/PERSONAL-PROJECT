@@ -186,74 +186,104 @@ body {
 }
 
 /* ============================ PROGESSION PAGES ============================ */
-/* layout */
-body {
+.progression-layout {
   display: flex;
 }
 
 
-.sidebar {
+/* the rail */
+.progression-rail {
   position: fixed;
   top: 0;
   left: 0;
-  width: 16rem;
   height: 100vh;
-  padding: 2.5rem 1.5rem;
+  width: 3.5rem;
 
 
-  background-color: #f3f3f7;
-  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  background: linear-gradient(
+    to bottom,
+    rgba(120, 70, 160, 0.35),
+    rgba(60, 40, 120, 0.35)
+  );
+
+
+  backdrop-filter: blur(10px);
+  padding-top: 6rem;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+
+
+  transition: width 0.35s ease;
+  z-index: 10;
 }
 
 
-.sidebar h3 {
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #6a6a6a;
-  margin-bottom: 1.5rem;
+/* expand on hover */
+.progression-rail:hover {
+  width: 11rem;
 }
 
 
-.sidebar ul {
-  list-style: none;
-}
+/* buttons */
+.rail-btn {
+  width: 8rem;
+  text-align: center;
 
 
-.sidebar li {
-  margin-bottom: 0.75rem;
-}
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.4rem;
 
 
-.sidebar a {
   text-decoration: none;
-  color: #1a1a1a;
-  font-size: 0.95rem;
-  padding: 0.4rem 0.5rem;
-  display: inline-block;
-  border-radius: 0.3rem;
-  transition: background-color 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.12);
+
+
+  opacity: 0;
+  transform: translateX(-0.5rem);
+
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    background-color 0.2s ease;
 }
 
 
-.sidebar a:hover {
-  background-color: rgba(118, 64, 160, 0.12);
+/* reveal buttons on hover */
+.progression-rail:hover .rail-btn {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 
-.sidebar .active a {
-  background-color: #7640a0;
+/* hover effect */
+.rail-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+
+/* active phase */
+.rail-btn.active {
+  background: rgba(255, 255, 255, 0.35);
   color: #fff;
 }
 
 
-/* main content */
+/* content offset */
 .progression-content {
-  margin-left: 16rem;
+  margin-left: 3.5rem;
   padding: 4rem 6rem;
-  width: 100%;
+  max-width: 56rem;
 }
-
 
 /* sections */
 .progression-section {
