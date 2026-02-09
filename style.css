@@ -6,6 +6,7 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* ============================ TITLE ============================ */
 /* main colors */
 body {
     background-color: #fafafb;
@@ -182,4 +183,196 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.25);
   background-color: #7640a0;
+}
+
+/* ============================ PROGESSION PAGES ============================ */
+/* layout */
+body {
+  display: flex;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16rem;
+  height: 100vh;
+  padding: 2.5rem 1.5rem;
+
+
+  background-color: #f3f3f7;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+
+.sidebar h3 {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6a6a6a;
+  margin-bottom: 1.5rem;
+}
+
+
+.sidebar ul {
+  list-style: none;
+}
+
+
+.sidebar li {
+  margin-bottom: 0.75rem;
+}
+
+
+.sidebar a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.5rem;
+  display: inline-block;
+  border-radius: 0.3rem;
+  transition: background-color 0.2s ease;
+}
+
+
+.sidebar a:hover {
+  background-color: rgba(118, 64, 160, 0.12);
+}
+
+
+.sidebar .active a {
+  background-color: #7640a0;
+  color: #fff;
+}
+
+
+/* main content */
+.progression-content {
+  margin-left: 16rem;
+  padding: 4rem 6rem;
+  width: 100%;
+}
+
+
+/* sections */
+.progression-section {
+  max-width: 52rem;
+  margin-bottom: 6rem;
+}
+
+
+.progression-section h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+  line-height: 1.1;
+}
+
+
+/* subsections */
+.subsection {
+  margin-bottom: 4rem;
+}
+
+
+.subsection h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+
+/* text */
+.progression-content p {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+  color: #1a1a1a;
+}
+
+
+/* lists */
+.progression-content ul {
+  margin: 1rem 0 1.75rem 1.25rem;
+  line-height: 1.7;
+}
+
+
+.progression-content li {
+  margin-bottom: 0.6rem;
+}
+
+
+/* citations */
+.citation {
+  font-size: 0.7em;
+  text-decoration: none;
+  color: #7640a0;
+}
+
+
+.citation:hover {
+  text-decoration: underline;
+}
+
+
+/* images + analysis */
+.analysis-image {
+  margin: 2.5rem 0;
+}
+
+
+.analysis-image img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.18);
+}
+
+
+.analysis-image figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+
+/* phase navigation */
+.phase-navigation {
+  margin-top: 5rem;
+}
+
+
+.phase-navigation a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #7640a0;
+  font-size: 1rem;
+}
+
+
+.phase-navigation a:hover {
+  text-decoration: underline;
+}
+
+/* mobile responsive */
+@media (max-width: 900px) {
+  body {
+    display: block;
+  }
+
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+
+  .progression-content {
+    margin-left: 0;
+    padding: 3rem 2rem;
+  }
 }
