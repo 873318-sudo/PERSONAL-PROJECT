@@ -317,9 +317,8 @@ body {
 .progression-section { margin-bottom: 6.5rem; }
 .subsection { margin-bottom: 4rem; }
 
-.progression-content p,
-.progression-content ul { 
-  margin-bottom: 0px;
+.progression-content p, ul { 
+  margin-bottom: 1rem;
   line-height: 1rem;
   max-width: 56rem;
   color: #1a1a1a; }
