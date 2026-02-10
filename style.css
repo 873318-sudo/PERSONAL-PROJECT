@@ -320,10 +320,15 @@ body {
 .subsection { margin-bottom: 4rem; }
 
 .progression-content p, ul { 
-  margin-bottom: 3rem;
-  line-height: 3rem;
+  margin-bottom: 2rem;
+  line-height: 1rem;
   max-width: 56rem;
-  color: #1a1a1a !important; }
+  color: #1a1a1a !important;
+}
+
+.progression-content ul {
+  text-indent: 2.5rem;
+}
 
 sup { font-size: 0.72em; vertical-align: super; line-height: 0; }
 .citation {
