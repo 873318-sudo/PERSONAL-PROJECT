@@ -317,7 +317,7 @@ body {
 .progression-section { margin-bottom: 6.5rem; }
 .subsection { margin-bottom: 4rem; }
 
-.progression-content p { margin-bottom: 1lh; line-height: 2; max-width: 56rem; }
+.progression-content p { margin-bottom: 1rem; line-height: 1rem; max-width: 56rem; }
 
 sup { font-size: 0.72em; vertical-align: super; line-height: 0; }
 .citation {
