@@ -323,7 +323,7 @@ body {
   margin-bottom: 2rem;
   line-height: 1rem;
   max-width: 56rem;
-  color: #1a1a1a; }
+  color: #1a1a1a !important; }
 
 sup { font-size: 0.72em; vertical-align: super; line-height: 0; }
 .citation {
