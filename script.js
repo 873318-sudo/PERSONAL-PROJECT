@@ -55,3 +55,42 @@ const heroObserver = new IntersectionObserver((entries, observer) => {
 }, { threshold: 0.2 });
 
 heroObserver.observe(hero);
+
+// for progression pages
+function splitIntoLines(containerSelector) {
+  document.querySelectorAll(containerSelector).forEach(el => {
+    if (el.tagName.toLowerCase() === 'p') {
+      el.innerHTML = el.innerHTML
+        .split(/\n{2,}/) // double newlines
+        .map(line => `<span class="line paragraph">${line.trim()}</span>`)
+        .join('');
+    } else {
+      el.innerHTML = el.innerHTML
+        .split(/<br\s*\/?>/i)
+        .map(line => `<span class="line">${line.trim()}</span>`)
+        .join('');
+    }
+  });
+}
+
+splitIntoLines('.progression-content p');
+splitIntoLines('.progression-section h1, .progression-section h2');
+
+const sectionObserver = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const container = entry.target;
+    const lines = container.querySelectorAll('.line');
+
+    lines.forEach((ln, i) => setTimeout(() => ln.classList.add('active'), i * 90));
+
+    // reveal any abs-img inside this section
+    container.querySelectorAll('.abs-img').forEach((img, i) => {
+      setTimeout(() => img.classList.add('show'), lines.length * 90 + i * 120);
+    });
+
+    obs.unobserve(container);
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.subsection, .progression-section').forEach(s => sectionObserver.observe(s));
