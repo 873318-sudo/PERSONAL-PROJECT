@@ -341,11 +341,11 @@ body {
 }
 
 .abs-img {
-  position: absolute;
-  top: 15rem;
-  left: 15rem;
-  width: 25rem;
-  height: 25rem;
+  position: relative;
+  top: var(--top);
+  left: var(--left);
+  width: 50rem;
+  height: 30rem;
   max-width: 80%;
   object-fit: cover;
   border-radius: 0.5rem;
