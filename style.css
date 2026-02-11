@@ -336,8 +336,7 @@ body {
   position: absolute;
 
   top: var(--y);
-  right: calc(-1 * (100vw - 66rem) / 2);
-
+  right: calc(-1 * (100vw - 57rem) / 2);
 
   width: var(--w);
   height: var(--h);
