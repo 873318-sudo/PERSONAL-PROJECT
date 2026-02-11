@@ -332,9 +332,9 @@ body {
 
 .prog-image {
   float: left;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: var(--width);
+  height: var(--height);
+  border-radius: 4%;
   shape-outside: square();
   margin-right: 20px;
 }
