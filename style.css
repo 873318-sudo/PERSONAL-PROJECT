@@ -334,7 +334,8 @@ body {
   position: absolute;
 
   top: var(--y);
-  right: 4rem;
+  right: calc(-1 * (100vw - 66rem) / 2);
+
 
   width: var(--w);
   height: var(--h);
@@ -368,6 +369,7 @@ body {
 
 /* responsive */
 @media (max-width: 900px) {
+  .prog-image { position: relative; right: auto; width: 100%; height: auto; margin: 1.5rem 0; }
   .progression-rail { display: none; }
   .progression-content { margin-left: 0; padding: 2.25rem; }
   .abs-img { position: absolute; top: auto; left: auto; transform: none; width: 100%; margin: 1.25rem 0; }
