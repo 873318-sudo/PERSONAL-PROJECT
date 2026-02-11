@@ -76,7 +76,7 @@ body {
     transparent 6rem
   );
   pointer-events: none;
-  z-index: 0;
+  z-index: -99;
 }
 
 .progression-content::after {
@@ -91,7 +91,7 @@ body {
     transparent 5rem
   );
   pointer-events: none;
-  z-index: 0;
+  z-index: -99;
 }
 
 /* make sure progression content overlays the grid */
@@ -330,27 +330,16 @@ body {
   text-indent: 2.5rem;
 }
 
-.center-image {
-  display: block;
-  margin: 2rem auto;
-  width: 100%;
-  max-width: 56rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.16);
-  object-fit: cover;
-}
-
-.abs-img {
+.prog-image {
   position: relative;
   top: var(--top);
-  left: var(--left);
-  width: 50rem;
-  height: 30rem;
-  max-width: 80%;
+  width: 26.25rem;
+  height: 26.25rem;
   object-fit: cover;
   border-radius: 0.5rem;
-  box-shadow: 0 2.5rem 5rem rgba(0,0,0,0.18);
-  opacity: 0;
+  box-shadow:
+    0 2.5rem 5rem rgba(0, 0, 0, 0.22),
+    0 0.75rem 1.25rem rgba(0, 0, 0, 0.14);
 }
 
 .phase-navigation {
